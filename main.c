@@ -362,7 +362,7 @@ number_t SQR(int argc, number_t * argv) {
 }
 
 number_t POW(int argc, number_t * argv) {
-    if (fabs(argv[0].real) > EPS) {
+    if (fabs(argv[1].imag) < EPS) {
         number_t phase, mod;
         if (argv[0].real < -EPS && fabs(argv[0].imag) < EPS) {
             phase = (number_t){M_PI, 0};
